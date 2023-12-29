@@ -1,4 +1,5 @@
 import numpy as np
+from numpy import *
 
 a = np.array([1, 2, 3, 4, 5, 6])
 print(a)
@@ -21,9 +22,23 @@ print(a)
 print(d)
 print(e) '''
 
-
+'''
 print(a.shape)
 print(a.size)
 print(b.shape)
 print(b.reshape(3,2,1))
-print(b.size)
+print(b.size)'''
+
+for x in nditer(a):
+          print(x)
+          
+for x in nditer(b,flags=['buffered'],op_dtypes=['S']):
+          print(x)
+          
+for x in nditer(c[:,::2]):
+          print(x)
+          
+for idx,x in ndenumerate(c):
+          print(idx,x)
+
+
