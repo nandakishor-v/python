@@ -57,3 +57,22 @@ print(hstack((a,a1)))
 print(vstack((a,a1)))
 print(dstack((a,a1)))
 
+
+c=array([[1,2,3],[4,5,6],[7,8,9]])
+c1=hsplit(c,3)
+print(c1)
+
+print(a.searchsorted(3))
+print(where(a==3))
+
+'''filter=a>2
+print(a[filter])'''
+
+filter=a%2==0
+print(a[filter])
+
+
+print(random.randint(100,size=[3]))
+print(random.randint(100,size=[2,3]))
+
+
