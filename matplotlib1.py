@@ -1,6 +1,9 @@
 import matplotlib.pyplot as ply
 import numpy as np
 
+
+ply.suptitle("hdhd")
+
 x=np.array([1,1,3,3])
 y=np.array([7,5,5,3])
 ply.subplot(2,2,1)
@@ -34,4 +37,16 @@ ply.title("Logo",fontdict={"family":"times new roman","color":"purple","size":30
 ply.xlabel("blue")
 ply.ylabel("red")
 ply.grid(color="green")
+
+
+
+
+a=np.array([1,2,3,4])
+b=np.array([6,7,8,9])
+a1=np.array([4,2,7,5])
+colour=np.array(["red","blue","green","yellow"])
+ply.subplot(2,2,3)
+ply.scatter(a,b,c=colour)
+ply.scatter(a1,a)
+ply.colorbar()
 ply.show()
