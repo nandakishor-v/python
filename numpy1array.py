@@ -75,4 +75,9 @@ print(a[filter])
 print(random.randint(100,size=[3]))
 print(random.randint(100,size=[2,3]))
 
+a=np.array([0,1])
+b=np.array([1,0])
+c=np.dot(a,b) 
+print(c)
+
 
