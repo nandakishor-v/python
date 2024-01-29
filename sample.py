@@ -22,5 +22,11 @@ def sample(*args):
 
 sample(1,2,3,4,54,6)
 
+var = "James" * 2  * 3
+print(var)
+
+var1= "James Bond"
+print(var1[2::-1])
+
 
                                                          
