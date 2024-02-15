@@ -1,20 +1,28 @@
-# importing module
-import matplotlib.pyplot as plt
+# Implementation of matplotlib function 
+import matplotlib.pyplot as plt 
+import numpy as np 
+from matplotlib.patches import Ellipse 
 
-# assigning x and y coordinates
-x = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
-y = []
+NUM = 200
 
-for i in range(len(x)):
-	y.append(max(0, x[i]))
+ells = [Ellipse(xy = np.random.rand(2) * 10, 
+				width = np.random.rand(), 
+				height = np.random.rand(), 
+				angle = np.random.rand() * 360) 
+		for i in range(NUM)] 
 
-# depicting the visualization
-ax = plt.plot(x, y, color='green')
+fig, ax = plt.subplots(subplot_kw ={'aspect': 'equal'}) 
 
-# turn off the axes
-#plt.axis('off')
+for e in ells: 
+	ax.add_artist(e) 
+	e.set_clip_box(ax.bbox) 
+	e.set_alpha(np.random.rand()) 
+	e.set_facecolor(np.random.rand(4)) 
 
-# displaying the title
-plt.title("ReLU function graph")
+ax.set_xlim(3, 7) 
+ax.set_ylim(3, 7) 
 
-plt.show()
+
+fig.suptitle('matplotlib.axes.Axes.add_artist() \ function Example\n\n', fontweight ="bold") 
+
+plt.show() 
