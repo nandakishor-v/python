@@ -59,4 +59,4 @@ try:
 finally:
     # Close the webdriver
     driver.quit()
-    df.to_csv("csvfiles.csv")
+    df.to_csv("csvfiles.csv")   
